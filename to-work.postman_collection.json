@@ -1,0 +1,252 @@
+{
+	"info": {
+		"_postman_id": "df150b37-6f74-49a0-857e-4e0f8addfbc3",
+		"name": "to-work",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create vacant",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"vacancy_link\": \"https://test.com\",\n  \"position_name\": \"Python dev\",\n  \"company_name\": \"Company C.A\",\n  \"salary\": 6000,\n  \"currency\": \"USD\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{HOST}}{{BASE_URL}}/vacants/",
+					"host": [
+						"{{HOST}}{{BASE_URL}}"
+					],
+					"path": [
+						"vacants",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "vacant add skills",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"skill_id\": \"853b0bdf-ffad-4b2c-b28a-710ee1fa19b6\",\n  \"value\": 2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{HOST}}{{BASE_URL}}/vacants/64f8abd6-2754-45c9-9606-09c4233a417c/add-skills",
+					"host": [
+						"{{HOST}}{{BASE_URL}}"
+					],
+					"path": [
+						"vacants",
+						"64f8abd6-2754-45c9-9606-09c4233a417c",
+						"add-skills"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create skill",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"AWS\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{HOST}}{{BASE_URL}}/skills/",
+					"host": [
+						"{{HOST}}{{BASE_URL}}"
+					],
+					"path": [
+						"skills",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get skills",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{HOST}}{{BASE_URL}}/skills/",
+					"host": [
+						"{{HOST}}{{BASE_URL}}"
+					],
+					"path": [
+						"skills",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get vacants",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{HOST}}{{BASE_URL}}/vacants/",
+					"host": [
+						"{{HOST}}{{BASE_URL}}"
+					],
+					"path": [
+						"vacants",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{HOST}}{{BASE_URL}}/users/",
+					"host": [
+						"{{HOST}}{{BASE_URL}}"
+					],
+					"path": [
+						"users",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add skill user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"skill_id\": \"853b0bdf-ffad-4b2c-b28a-710ee1fa19b6\",\n  \"value\": 3\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{HOST}}{{BASE_URL}}/users/25a526b9-ceef-42bd-b470-87710182976d/add-skills/",
+					"host": [
+						"{{HOST}}{{BASE_URL}}"
+					],
+					"path": [
+						"users",
+						"25a526b9-ceef-42bd-b470-87710182976d",
+						"add-skills",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update user",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"first_name\": \"Anderson\",\n  \"last_name\": \"Guerrero\",\n  \"email\": \"aguerrerodev@gmail.com\",\n  \"years_previous_experience\": 5\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{HOST}}{{BASE_URL}}/users/25a526b9-ceef-42bd-b470-87710182976d/",
+					"host": [
+						"{{HOST}}{{BASE_URL}}"
+					],
+					"path": [
+						"users",
+						"25a526b9-ceef-42bd-b470-87710182976d",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "vacants per user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{HOST}}{{BASE_URL}}/users/25a526b9-ceef-42bd-b470-87710182976d/vacants/",
+					"host": [
+						"{{HOST}}{{BASE_URL}}"
+					],
+					"path": [
+						"users",
+						"25a526b9-ceef-42bd-b470-87710182976d",
+						"vacants",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "BASE_URL",
+			"value": "/api/v1"
+		},
+		{
+			"key": "HOST",
+			"value": "http://0.0.0.0:8001"
+		}
+	]
+}

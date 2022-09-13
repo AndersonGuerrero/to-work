@@ -1,0 +1,4 @@
+fastapi==0.82.0
+uvicorn[standard]
+SQLAlchemy==1.4.41
+pydantic[email]
